@@ -27,7 +27,7 @@ public class ReciverMessage {
 	@Transactional
 	@JmsListener(destination = "transaction")
 	public void recivedMessage(String message) {
-		System.out.println(message);
+		
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.registerModule(new JavaTimeModule());
 		
@@ -42,4 +42,5 @@ public class ReciverMessage {
 		}
 		
 	}
+	
 }
